@@ -1,8 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset some default browser styles */
+body, h1, h2, p, ul {
     margin: 0;
     padding: 0;
+}
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
+    padding-bottom: 50px; /* To avoid footer overlap */
 }
 
 header {
@@ -22,20 +29,21 @@ header p {
 
 section {
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Restrict the width on larger screens */
 }
 
 h2 {
     border-bottom: 2px solid #333;
     padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 ul {
     list-style-type: disc;
-    margin: 0;
     padding-left: 20px;
 }
 
@@ -51,4 +59,48 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header, section, footer {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    section {
+        margin: 10px;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p, footer p {
+        font-size: 0.9em;
+    }
+
+    section {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
 }
